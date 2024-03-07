@@ -1,0 +1,17 @@
+function moveButton() {
+    var button = document.getElementById('noBtn');
+    var newX = Math.random() * (window.innerWidth - button.clientWidth);
+    var newY = Math.random() * (window.innerHeight - button.clientHeight);
+    button.style.position = 'absolute';
+    button.style.left = newX + 'px';
+    button.style.top = newY + 'px';
+}
+
+document.getElementById('yesBtn').addEventListener('click', function() {
+    document.body.innerHTML = `
+        <div id="result" class="container" style="display: none;">
+            <h2 class="result-heading">Right Answer, Now Follow Me Back on Instagram</h2>
+            <p class="instagram-text">My Instagram: <a href="https://www.instagram.com/sabamekanarishvili/" target="_blank">sabamekanarishvili</a></p>
+        </div>
+    `;
+});
